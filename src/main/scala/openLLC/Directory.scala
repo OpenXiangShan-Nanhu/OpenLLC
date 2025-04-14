@@ -20,9 +20,9 @@ package openLLC
 import chisel3._
 import chisel3.util._
 import org.chipsalliance.cde.config.Parameters
-import coupledL2.utils.{SRAMTemplate, ReplacementPolicy}
+import xs.utils.sram.SRAMTemplate
+import xs.utils.{ReplacementPolicy, ParallelPriorityMux}
 import coupledL2.tl2chi.HasCHIOpcodes
-import utility.{ParallelPriorityMux}
 
 trait HasClientInfo { this: HasOpenLLCParameters =>
   def clientCacheParams = cacheParams.clientCaches

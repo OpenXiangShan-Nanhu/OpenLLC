@@ -19,7 +19,7 @@ package openLLC
 
 import chisel3._
 import chisel3.util._
-import coupledL2.utils.SRAMTemplate
+import xs.utils.sram.SRAMTemplate
 import org.chipsalliance.cde.config.Parameters
 
 class DSRequest(implicit p: Parameters) extends LLCBundle {

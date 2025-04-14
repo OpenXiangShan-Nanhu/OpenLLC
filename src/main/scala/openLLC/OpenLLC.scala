@@ -28,12 +28,12 @@ class OpenLLC(implicit p: Parameters) extends LazyModule with HasOpenLLCParamete
   class OpenLLCImp(wrapper: LazyModule) extends LazyModuleImp(wrapper) {
     private val sizeBytes = cacheParams.toCacheParams.capacity.toDouble 
     private val sizeStr = sizeBytesToStr(sizeBytes)
-    private val clientParam = cacheParams.clientCaches.head.toCacheParams
+    // private val clientParam = cacheParams.clientCaches.head.toCacheParams
     // Display info
     println(s"====== ${inclusion} CHI-CHI ${cacheParams.name} ($sizeStr * $banks-bank)  ======")
     println(s"bankBits: ${bankBits}")
     println(s"sets:${cacheParams.sets} ways:${cacheParams.ways} blockBytes:${cacheParams.blockBytes}")
-    println(s"[snoop filter] size:${sizeBytesToStr(clientSets * clientWays * clientParam.blockBytes.toDouble)}")
+    // println(s"[snoop filter] size:${sizeBytesToStr(clientSets * clientWays * clientParam.blockBytes.toDouble)}")
     println(s"[snoop filter] sets:${clientSets} ways:${clientWays}")
 
     val io = IO(new Bundle {
