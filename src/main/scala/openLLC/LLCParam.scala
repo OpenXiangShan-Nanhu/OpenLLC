@@ -22,8 +22,8 @@ import chisel3.util._
 import freechips.rocketchip.diplomacy._
 import org.chipsalliance.cde.config.{Field, Parameters}
 
-import xs.utils.cacheParam.L2Param
-import xs.utils.cacheParam.CacheParameters
+import xs.utils.cache.L2Param
+import xs.utils.cache.CacheParameters
 
 case class ResourceConfig(refill: Int, response: Int, snoop: Int, memory: Int)
 
